@@ -1,15 +1,14 @@
-/*
-If a variable has no link with the function component then define it outside of the component
-which avoids re-defining it on every function call
-*/
-const title = `React`;
+function getTitle(title) {
+    return title;
+}
 
 function App() {
-    // you can do something in between
-
     return (
         <div>
-            <h1>Hello {title}</h1>
+            <h1>Hello {getTitle('React')}</h1>
+
+            <label htmlFor="search">Search: </label>
+            <input id="search" type="text" />
         </div>
     );
 }
